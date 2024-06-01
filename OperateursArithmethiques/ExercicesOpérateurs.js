@@ -5,9 +5,8 @@
 const longueur = 5;
 const largeur = 3;
 
-//const perimetre = (longueur * 2) +(largeur * 2); // mais bien
-//Pour une meilleure optimisation: 
-const perimetre = 2 * (longueur + largeur)
+//const perimetre = (longueur * 2) +(largeur * 2); 
+const perimetre = 2 * (longueur + largeur); // mais mieux pour une meilleure optimisation: 
 // ou
 let perim = (longueur * 2) + (largeur * 2);// 
 
@@ -39,10 +38,11 @@ let pourcentage = 5 ;
 console.log(pourcentage);
 let interet = 1 + (pourcentage / 100); // revient à faire: let newSolde = (soldeEpargne = soldeEpargne * pourcentage) / 100;
 console.log("L'intêret annuel est de:", interet);
-console.log("Le solde après intêret annuel est de:",  soldeEpargne + interet);
+console.log("Le solde après intêret annuel est de:", soldeEpargne * interet);
+
 //Correction
 let solde = 1000;
-//augmentation: 1 + ( t / 100);  donc 1 + ( 5 / 100) = 1,05;
+//pour une augmentation: 1 + ( t / 100);  donc 1 + ( 5 / 100) = 1,05;
 solde *= 1.05; // revient à faire:  solde = solde * 1,05
 console.log("La correction, le solde après intêret annuel est de:", solde);
 
@@ -55,7 +55,11 @@ const result1 = number1 == number2;
 console.log("Voilà le résultat d'un test de comparaison d'égalité entre 10 et '1O' :", result1);//true car meme valeur
 
 const result2 = number1 === number2;
-console.log("Voilà le résultat d'un test de comparaison d'égalité stricte entre 10 et '1O' :", result2);//false car type différent
+console.log("Voilà le résultat d'un test de comparaison d'égalité stricte entre 10 et '1O' :", result2);//false car les type ne sont pas égaux
+
+// typeof: propriété permettant de voir le type
+console.log(typeof number1);
+console.log(typeof number2);
 
 // 6.Opérateurs de comparaison part 2
 // Déterminez si l'âge de John (18 ans) est supérieur à celui de Bob (12 ans).
@@ -64,7 +68,7 @@ const johnAge = 18;
 const bobAge = 12;
 
 const test = johnAge > bobAge; //true
-console.log("age test:", test);
+console.log("L'âge de John est-il supérieur à celui de Bob?", test);
 
 // 7.Opérateurs Logiques Part 1
 // Créer une variable nomComplet, longueur de chaine, transformation.
@@ -82,7 +86,7 @@ const utilisateur = 20;
 const age = 18;
 const aPermis = true;
 
-const majorite = utilisateur >= age && aPermis === true;
+const majorite = utilisateur >= age && aPermis;
 console.log("Est-ce que l'utilisateur est majeur et à un permis de conduire? ", majorite);
 
 // 8.Travailler avec des objets
