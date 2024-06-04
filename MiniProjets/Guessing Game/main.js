@@ -1,3 +1,5 @@
+// lien youTube:  https://www.youtube.com/watch?v=Jira91nvLKU
+
 function guessNumber() {
     let playerGuess;
     const numberToGuess = Math.ceil(Math.random() * 10);// Méthode ceil arrondi au nombre le plus haut

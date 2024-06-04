@@ -105,4 +105,4 @@ console.log("La nouvelle valeure de aimeLeChocolat est:", aimeLeChocolat);//fals
 // Vérifies si une personne de 70 ans est éligible.
 const client = 70;
 const eligibilite = client < 10 || client > 65;
-console.log("Est-ce que le client est éligible? ",eligibilite); //true
+console.log("Est-ce que le client est éligible? ", eligibilite); //true
