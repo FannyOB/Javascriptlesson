@@ -1,6 +1,6 @@
 // 1-Boucles FOR
 //Lorsque l'on SAIT A L'AVANCE COMBIEN DE FOIS le bloc doit être éxecuté
-//rappel let i = 0 signifie tu boucles à partir de la valeur 0
+//rappel let i = 0 , signifie tu boucles à partir de la valeur 0 (valeur de départ)
 
 for (let i = 0; i < 5; i++){
     console.log("Numéro :", i);
@@ -37,7 +37,8 @@ do{
 
 
 // 4-Boucles FOR...OF pour PARCOURIR les TABLEAUX
-// FOR (avec "let" on défini 1 variable avec l'élément au singulier.) OF (Donc La variable de ce que l'on va parcourir=le tableau)
+// dans la boucle FOR (avec "let" on défini 1 variable avec l'élément au singulier.) ->
+// OF (Donc La variable de ce que l'on va parcourir=le tableau)
 
 let couleurs = ["rouge", "vert", "bleu"];
 
@@ -47,7 +48,7 @@ for(let couleur of couleurs){
 
 
 // 5-Boucles FOR IN pour les OBJETS 
-// (avec "let" on défini 2 varibles, la variable de ce que l'on va parcourir , dans l'objet)
+// dans la boucle FOR IN (avec "let" on défini 2 variables, la variable de ce que l'on va parcourir , dans l'objet)
 
 let voiture = {
     marque: "Toyota", //cle: valeur
