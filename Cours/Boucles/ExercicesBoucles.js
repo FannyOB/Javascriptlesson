@@ -77,9 +77,9 @@ while(solde <= 200){
 console.log("Le nombre d'année nécéssaire est:", annee );
 
 
-// 6-TROUVER UN UN NOMBRE
-// Utilises un boucle do...while pour générer des nombres aléatoires entre 1 et 10 jusqu'à ce que tu géneres le nombre 5. 
-// Comptes et affiches le nombre d'essais nécessaires
+// 6-TROUVER UN NOMBRE
+// Utilises une boucle do...while pour générer des nombres aléatoires entre 1 et 10 jusqu'à ce que tu géneres le nombre 5. 
+// Comptes et affiches le nombre d'essais nécessaires.
 
 let numbers, essais = 0;
 

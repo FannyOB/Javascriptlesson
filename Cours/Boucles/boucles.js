@@ -38,7 +38,7 @@ do{
 
 // 4-Boucles FOR...OF pour PARCOURIR les TABLEAUX
 // dans la boucle FOR (avec "let" on défini 1 variable avec l'élément au singulier.) ->
-// OF (Donc La variable de ce que l'on va parcourir=le tableau)
+// OF (Donc La variable de ce que l'on va parcourir = le tableau)
 
 let couleurs = ["rouge", "vert", "bleu"];
 
@@ -48,7 +48,7 @@ for(let couleur of couleurs){
 
 
 // 5-Boucles FOR IN pour les OBJETS 
-// dans la boucle FOR IN (avec "let" on défini 2 variables, la variable de ce que l'on va parcourir , dans l'objet)
+// dans la boucle FOR IN (avec "let" on défini 1 variable, la variable de ce que l'on va parcourir , dans l'objet)
 
 let voiture = {
     marque: "Toyota", //cle: valeur
