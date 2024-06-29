@@ -10,13 +10,13 @@ let livre = {
     annee : 1952
 }
 
-console.log(livre);
+console.log(livre); // titre: 'Peau noire, masques blancs', auteur: 'Frantz Fanon', annee: 1952
 
 /**
  * 2-ACCÈS AUX PROPRIÉTÉS
  * Accèdes et affiches la propriété auteur de l'objet livre créé dans l'exercice 1.
  */
-console.log(livre.auteur);
+console.log(livre.auteur); // Frantz Fanon
 
 
 /**
@@ -24,13 +24,18 @@ console.log(livre.auteur);
  * Modifies la propriété année de l'objet livre pour qu'elle soit mise à jour à 2021.
  */
 
+//Ici j'ai créé une méthode,ce qui est correct aussi. Mais on souhaite juste modifier la valeur de la propriété "année"!!
+/*
 livre.anneeMiseAjour = function(nouvelAnnee){
 
     this.annee = nouvelAnnee;
 }
-
 console.log(livre.anneeMiseAjour(2021));
-//console.log(livre);
+*/
+
+//CORRECTION, il est possible de réassigner (=overider) une Valeur dans l'objet.
+livre.annee = 2024;
+console.log(livre); // { titre : Peau noire, masques blancs  auteur : Frantz Fanon  annee : 2024 }
 
 /**
  * 4-AJOUT DE MÉTHODES
@@ -45,7 +50,7 @@ livre.afficherLivre = function(){
         "annee :", this.annee
     )
 }
-console.log(livre.afficherLivre())
+console.log(livre.afficherLivre()) // titre : Peau noire, masques blancs auteur : Frantz Fanon annee : 2024 
 
 /**
  * 5-UTILISATION DE THIS
@@ -56,8 +61,8 @@ let personne = {
     nom : "Odette",
     age : 60,
     bonAnniversaire : function(){
-        this.age++;
-        console.log("Nouvelle année: ", this.age);
+        this.age++; // ou this.age += 1
+        console.log("Joyeux anniversaire", this.nom,"Vous avez maintenant", this.age, "ans!!");
     }
 }
 
@@ -68,9 +73,11 @@ console.log(personne.bonAnniversaire());
  * Utilises une boucle for...in pour afficher toutes les propriétés et valeurs de l'objet personne.
  */
 
-for(let cle in personne){
+for(let propriete in personne){
     console.log(
-       `cle ${cle} : ${personne[cle]}`);
+       `propriété ${propriete} : ${personne[propriete]}`);
+       // correct mais équivalent:
+       // propriete,":", personne[propriete])
 }
 
 /**
@@ -79,26 +86,31 @@ for(let cle in personne){
  */
 
 let professeur = {
+    nom : "Monsieur Dupont",
     matieres : ["Mathématique", "Français", "S.V.T", "Histoire"]
 }
 
-console.log(professeur);
+console.log(professeur); // {nom: 'Monsieur Dupont', matieres: [ 'Mathématique', 'Français', 'S.V.T', 'Histoire' ] }
 
 /**
  * 8-MÉTHODE RETOURNANT UNE VALEUR
- * Ajoutez une méthode enseigneMaths à l'objet professeur qui retourne true si le professeur enseigne les mathématiques.
+ * Ajoutez une méthode enseigneMaths (= nouvelle propriété)  à l'objet professeur qui retourne true si le professeur enseigne les mathématiques.
  */
 
 professeur.enseigneMaths = function(){
-    //this.matiere.includes("Math");
-    /*
-    for(let matiere of this.matieres){
-        this.matieres.includes("Math");
-    }
-    */
+
+   //la f° include va prendre l'argument "Mathématique" pour la vérification et retourne un boolean.
     return this.matieres.includes("Mathématique");
     
 }
 
-console.log(professeur.enseigneMaths());
+console.log(professeur.enseigneMaths()); // true
 //console.log(professeur);
+
+//ici réassigne une nouvelle valeur à la propriété matière
+professeur.matieres = ["Anglais", "Géographie"];
+
+console.log(professeur); // { nom: 'Monsieur Dupont', matieres: [ 'Anglais', 'Géographie' ], enseigneMaths: [Function (anonymous)] }
+
+//Ici il vérifie si "Mathématique" est inclus ds le tableau, ce qui sera faux
+console.log(professeur.enseigneMaths())// false
