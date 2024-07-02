@@ -41,8 +41,8 @@ console.log(nombres); // [ 10, 20, 30 ]
  * Utilises la méthode pop pour retirer le dernier élément du tableaux nombres et imprimes cet élément.
  * 
  */
-let afficherlement = nombres.pop();
-console.log(afficherlement); // 30 (impression du dernier élément retiré)
+const dernierNombre = nombres.pop();
+console.log(dernierNombre); // 30 (impression du dernier élément retiré)
 
 /**
  * 3-AJOUTER AU DEBUT AVEC UNSHIFT
@@ -57,7 +57,7 @@ console.log(nombres);// [ 5, 10, 20 ]
  * 4-RETIRER DU DEBUT AVEC SHIFT
  * Utilises shift pour enlever le premier élément du tableau nombres et imprimes cet élément.
  */
-let enleverPremierElement = nombres.shift();
+const enleverPremierElement = nombres.shift();
 console.log(enleverPremierElement); // 5
 console.log(nombres); // [ 10, 20 ]
 
@@ -66,7 +66,7 @@ console.log(nombres); // [ 10, 20 ]
  * 5-PARCOURIR AVEC FOREACH
  * Utilises forEach pour afficher chaque nombre du tableau nombres.
  */
-let parcourir = nombres.forEach(function(nombre){
+const parcourir = nombres.forEach(function(nombre){
     console.log(nombre) ;
 });
 
@@ -78,11 +78,11 @@ console.log(parcourir); // 10  20
  */
 nombres;
 
-let carres = nombres.map(function(nombre){
-    return nombre * nombre;
+const carres = nombres.map(function(nombre){
+    return nombre * 2;
 });
 
-console.log(carres); // [ 100, 400 ]
+console.log(carres); // [ 20, 40 ]
 
 
 /**
@@ -102,12 +102,9 @@ console.log(nombres); // [ 10, 20, 40 ]
  * Utilisez map pour créer un tableau de nombres au carré, puis utilisez forEach pour imprimer chaque nombre.
  */
 let nouveauTableau = nombres.map(function(nombre){
-   return nombre * nombre; 
+   return nombre * 2; 
+}).forEach(function(nb){
+    console.log(nb); // 20 40 80
 });
 
-console.log(nouveauTableau); // [ 100, 400, 1600 ]
-
-let imprimerChaqueNombre = nouveauTableau.forEach(function(nouveau){
-    console.log(nouveau); // 100 400 1600
-});
-
+// "." point accesseur 
