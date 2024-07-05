@@ -61,9 +61,43 @@ function tableMultiplication(a){
 
 tableMultiplication(8);
 
-//Fonction fléchée
-// Recursivité = l'appel d'une fonction par elle-même
+
+// FONCTION FLECHEE
+// RECURSIVITE = l'appel d'une fonction par elle-même
+let tabPrenoms = [] ; 
+let prenom;
+let arreter;
 
 const recuperationDonnee = () => {
+    
+    let isTrue = true;
+    /*
+        while(isTrue){
+        prenom = prompt("Veuillez entrer votre prénom?");
+        tabPrenoms.push(prenom);
+        
+        arreter = prompt("Voulez vous arreter l'enregistrement? oui ou non")
+        
+            if(arreter === "oui"){
+            isTrue = false;
+            }
+        }
+    console.log(tabPrenoms);
+    */
 
-}
+    // Utilisons une condition à la place de la boucle while
+    if(isTrue){
+        prenom = prompt("Veuillez entrer votre prénom?");
+        tabPrenoms.push(prenom);
+    } 
+
+    arreter = prompt("Voulez vous arreter l'enregistrement? oui ou non");
+
+    if(arreter == "non"){
+        recuperationDonnee(); // Nous rappelons la fonction de nouveau
+    }
+};
+
+recuperationDonnee();
+
+ console.log(tabPrenoms);
