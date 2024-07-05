@@ -24,7 +24,7 @@
 function calculerSurface(largeur, hauteur){
 
     return largeur * hauteur;
-}
+};
 
 console.log(calculerSurface(5, 2)); //NOTE: appel d'une fonction dans une fonction. Donc retour de la valeur de la f°
 console.log(calculerSurface(5, 3));
@@ -40,9 +40,30 @@ function estMajeur(age){
         return false
     }*/
     return age >= 18;
-}
+};
 
 console.log(estMajeur(16));
 console.log(estMajeur(20));
 console.log(estMajeur(18));
 console.log(estMajeur(15));
+
+
+//Principe d'une caltulatrice
+
+function tableMultiplication(a){
+    console.log(`la table de multiplication de : ${a} `);
+
+    for(let i = 0; i <= 10; i++){
+
+        console.log(`${a} * ${i} = ${a * i}`);
+    }
+};
+
+tableMultiplication(8);
+
+//Fonction fléchée
+// Recursivité = l'appel d'une fonction par elle-même
+
+const recuperationDonnee = () => {
+
+}

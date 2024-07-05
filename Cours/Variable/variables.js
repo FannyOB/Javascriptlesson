@@ -16,3 +16,4 @@ espece: "chien"
 };
 
 console.log(animalDeCompagnie);
+
