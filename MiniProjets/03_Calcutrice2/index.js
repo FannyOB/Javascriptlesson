@@ -1,5 +1,4 @@
-// 1-
-
+// 1-Création de la fonction addToList()
 let list = [];
 let oldResult = 0;
 
@@ -16,7 +15,7 @@ function addToList(a){
         document.getElementById('result').innerHTML = list.join('') //(va convertir notre array en chaine de caract.) scrée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'un objet semblable à un tableau). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur. Ici list.join(''), la string vide mise, indique que les strings sont concatené sans les virgules.(tout est collé)    
 };
 
-// 5-Fonction pour vérifier si les informations sont bien correctes,
+// 4-Fonction pour vérifier si les informations sont bien correctes,
 //avec expression regulière pour accepter des chiffres et caractères arithmétiques
 function secureCalc(){
     let regex = /^[\d\s()+\-*/.,*]+$/;
@@ -29,7 +28,7 @@ function secureCalc(){
 }
 
 
-// 6-Calculer le résultat
+// 5-Calculer le résultat
 function calc(){
     document.getElementById('calcul').innerHTML = list.join('');
     document.getElementById('result').innerHTML = secureCalc();
@@ -52,4 +51,4 @@ function del(){
 function delAll(){
     list = [];
     document.getElementById('result').innerHTML = 0;
-}
+};
