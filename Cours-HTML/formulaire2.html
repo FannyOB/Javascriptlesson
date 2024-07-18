@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire 2</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Username</label><br>
+        <input 
+            type="text" 
+            placeholder="username" 
+            minlength="5" 
+            maxlength="10"> <!-- permet d'indiquer le nombre min et max attendu, sinon lors de la soumission affichage d'une notification-->
+            <br> 
+        <label for="">Age</label><br>
+        <!-- permet d'indiquer que l'âge doit être compris entre 20 et 100 -->
+        <input 
+            type="tel" 
+            placeholder="entrez le numéro" 
+            min="20" 
+            max="100"
+            size="50"
+            pattern="[2-6]{5}-[0-9]{3}-[0-8]{4}"> <!-- indique que je veux 5 chiffres de 2 à 6, puis 3 chiffres de 0 à 9, etc...  -->
+            <br>   
+        <label for="">Password</label><br>
+        <input type="password" size="50"><br> <!-- Indique la taille du champs de donnèes à recevoir--> 
+        <label for="">Email</label><br>
+        <input type="email" value="Email" required> <!--remplissage obligatoire sinon impossible de le soumettre   -->
+        <input type="submit">
+
+        <!--attribut "multible" utiliser avec file, pour indiquer que l'on peut fournir plusieurs fichiers-->
+    </form>
+
+<!--les attributs permettent un meilleur référencement du site -->
+    <abbr title="world wide web">WWW</abbr><br>
+    <kbd>ctrl</kbd> + <kbd>c</kbd><br>
+    <button><kbd>cmd</kbd> + <kbd>c</kbd></button><br>
+    <code>gh</code><br>
+    <q>eveything is good</q><br> <!-- entre guillemet-->
+    <var>variable</var><br>
+
+    <select name="" id="">
+        <option value="lg">lg</option>
+        <option value="samsung">samsung</option>
+        <option value="apple">apple</option>
+        <option value="nokia">nokia</option>
+    </select>
+</body>
+</html>

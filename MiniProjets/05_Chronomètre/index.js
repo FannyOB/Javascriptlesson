@@ -16,18 +16,18 @@ function start(){
 function renderChrono(){
     millisecondes += 1;
 
-    if(millisecondes == 10){
+    if(millisecondes === 10){
         secondes += 1; // soit secondes = secondes + 1;
         //réinitialiser à 0, sinon il y aura un problème ds la fonction
         millisecondes = 0;
     }
 
-    if(secondes ==  60){
+    if(secondes ===  60){
         minutes += 1;
         secondes = 0;
     }
 
-    if(minutes == 60){
+    if(minutes === 60){
         hours += 1;
         minutes = 0;
     }
