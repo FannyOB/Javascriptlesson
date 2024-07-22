@@ -66,11 +66,12 @@ console.log(nombres); // [ 10, 20 ]
  * 5-PARCOURIR AVEC FOREACH
  * Utilises forEach pour afficher chaque nombre du tableau nombres.
  */
+console.log("Boucle foreach")
 const parcourir = nombres.forEach(function(nombre){
-    console.log(nombre) ;
+    console.log(nombre) ;// 10  20
 });
 
-console.log(parcourir); // 10  20
+console.log(parcourir); // undefined
 
 /**
  * 6-TRANSFORMER AVEC MAP
