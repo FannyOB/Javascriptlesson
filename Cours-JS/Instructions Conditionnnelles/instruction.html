@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Condition if, if/else
+        a = 10;
+        b = 10;
+        
+        if (a === b) {
+            document.write("<br>Méta Brains <br>");
+        }
+
+        c = 45;
+        d = 45;
+
+        if (c != d) {
+            document.write("true")
+        } else {
+            document.write("false")
+        }
+
+        // Opérateur ternaire de la condition
+        let x = 200;
+        let y;
+        // condition ? exprSiVrai : exprSiFaux
+        (x === 200) ? "Yes <br>" : "No <br>";
+        
+        //peut également être écrit
+        y = x === 200 ? "Yes <br>" : "No <br>";
+        document.write(y);
+
+        // Switch
+
+        let day = 9;
+
+        switch (day){
+            case 0:
+                document.write("Today is Monday");
+                break;
+            case 1:
+                document.write("Today is Tuesday");
+                break;
+            case 2:
+                document.write("Today is Wednesday");
+                break;
+            case 3:
+                document.write("Today is Thursday");
+                break;
+            case 4:
+                document.write("Today is Friday");
+                break;
+            case 5:
+                document.write("Today is Saturday");
+                break;
+            case 6:
+                document.write("Today is Sunday");
+                break
+
+            default:
+            document.write("Enter the valid day <br>");
+                break;
+
+        }
+
+        
+        for(let a = 1; a <= 10; a++){
+
+            if(a == 5){
+                document.write("Hey :" + a + "<br>");
+               /* continue; // la déclaration "continue" a retiré le "NO : 5" */
+               break; // la déclaration "break" a désactivé les instructions à partir de "NO : 5" */
+            }
+            document.write("NO :" + a +  "<br>");
+        }
+
+        let f = 10;
+        let g = "10";
+        //g++
+        //f += " poules";
+        document.write(f === g);
+
+    </script>
+</body>
+</html>
