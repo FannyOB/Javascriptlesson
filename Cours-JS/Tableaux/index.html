@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthode de tableau</title>
+</head>
+<body>
+    <script>
+
+        // Accès et modification des valeurs
+
+        let fruits = ["pomme", "banane", "fraise"];
+
+        console.log(fruits);
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+        console.log(fruits[3]); // "undefined" car cet indice n'existe pas
+
+        // Modifications des valeurs
+
+        const fruitos = ["peche", "cerise", "kiwi"];
+        console.log(fruitos); // Affiche [ 'peche', 'cerise', 'kiwi' ]
+
+        fruitos[0] = "fruit du dragon";
+        fruitos[1] = "orange";
+        console.log(fruitos); // Affiche [ 'fruit du dragon', 'orange', 'kiwi' ]
+
+        // Fonctions Tableau
+
+        // Méthode foreach()
+        // permet d'executer une FONCTION donnée sur CHAQUE ELEMENT du tableau.
+
+        const nombres = [10, 20, 30 , 40];
+        let somme = 0;
+
+        const retour5 = nombres.forEach(function(nombre){
+            somme += nombre;
+        });
+
+        console.log(`La somme est de ${somme} .`);
+
+        console.log(retour5);// indique "undefined" parceque la valeur de forEach() ne retourne rien! 
+                            // C'est pourquoi nous avons mis la méthode ds la variable retour5.
+
+
+        // Méthode map() 
+        // créé un NOUVEAU TABLEAU avec les RESULTAT de l'appel d'une fonction fournie sur CHAQUE ELEMENT du tableau.         
+
+        const numbers = [1, 2, 3, 4 , 5];
+
+        const carres = numbers.map(function (number){
+            return number * number;
+            }
+        );
+
+        console.log(carres); // [ 1, 4, 9, 16, 25 ]
+                let array = [10, 20, 30 ,40 , 50 ,60, 70];
+
+        document.write(array);
+
+        document.write("<ul>");
+        for(let a = 0; a <= 5; a++){
+        document.write("<li>" + array[a] + "</li>");
+        };
+        document.write("</ul>");
+
+        let array1 = ["joe", 50, "Den"];
+
+        array1[0]="Fanny";
+        document.write(array1, "<br>");
+        //array1.pop()
+        //document.write(array1);
+        delete array1[1];
+        document.write(array1 + "<br>");
+        document.write(array1[1] + "<br>");
+
+        let tab = ["b", "a", "c", "e", "d"];
+        document.write(tab + "<br>");
+        // sort(): trier les elements du tableau
+        tab.sort();
+        document.write(tab + "<br>");
+
+        let number = [1, 2, 3, 4,5];
+        document.write(number + "<br>");
+        // reverse(): inverse les chiffres
+        number.reverse();
+        document.write(number + "<br>");
+
+        let fruct = ["orange", "banana"];
+        document.write(fruct + "<br>");
+
+        //push(): ajout à la fin du tableau
+        let addFruct = fruct.push("apple");
+        document.write(addFruct); // 3 - indique le nombre d'élément ds le tableau
+        document.write(fruct + "<br>");
+
+        // pop(): supprime le dernier élément du tableau
+        let addLastel = fruct.pop()
+        document.write(fruct + "<br>");
+        document.write(addLastel, "<br>");// apple
+
+        //pop() et push() est l'inverse shift() et unshift
+
+        //methode de décallage
+        // unshift: ajoute un premier element ds tableau, décallage
+        fruct.unshift("peach","strawberries","watermelon");
+        document.write(fruct + "<br>");
+
+        // shift: supprime le premier element du tableau
+        fruct.shift();
+        document.write(fruct + "<br>");
+        document.write(fruct.sort() + "<br>");
+
+        // concat(): concataner 2 tableaux dans un unique tableau
+        document.write(fruct.concat(number) , "<br>");
+
+        // join(): va supprimer les virgules dans un tableau, ou remplacer les virgules
+        document.write(fruct.join(" / ") + "<br>");
+
+        // Gestion des valeurs du centre:
+        // slice(): indique l'indice à la quelle la valeur débute
+        document.write(fruct.slice(2) , "<br>");
+
+        // splice(): indique l'indice à laquelle nous remplaceront par les valeurs
+        document.write("Tableau initial: ", fruct, "<br>"); // Tableau initial: banana,orange,strawberries,watermelon
+
+        // Utilisation de splice pour remplacer les deux premiers éléments par "cherry" et "blue" et stocker les éléments supprimés dans fructos :
+        let fructos = fruct.splice(0, 2, "cherry", "blue");
+
+        document.write("Tableau après modification avec le splice : ", fruct , "<br>"); // Tableau après modification avec le splice : cherry,blue,strawberries,watermelon
+        document.write("Éléments supprimés : ", fructos, "<br>") // Éléments supprimés : banana,orange
+
+        // méthode isArray: vérifie le type de donée est un tableau par boolean
+        //let tab2 = [4, 3, 2, 1];
+        let tab2 = 1;
+        let verify = Array.isArray(tab2);
+        document.write(verify, "<br>");
+
+        if( Array.isArray(tab2) ){
+        document.write("It's an array!")
+        }
+        else{
+        document.write("It' s not an array!")
+        };
+
+        // indexOf: permet de trouver la position de l'index
+        /* indexOf() : Cherche la première occurrence de l'élément.
+        lastIndexOf() : Cherche la dernière occurrence de l'élément.
+        Ces méthodes sont très utiles lorsque vous travaillez avec des tableaux ou des chaînes de caractères et que vous avez besoin de savoir où un certain élément apparaît.
+        */
+        let tab3 = ["Fanny", "Muneeb", "Ori", "Fanny", "Julie", "Fanny"];
+        document.write(tab3, "<br>");
+        let research = tab3.indexOf("Fanny", 4);// en ème paramètre, possibilité d'indiquer où la recherche débute avec un index.
+        document.write(research, "<br>");
+
+        // lastIndexOf
+        document.write(tab3.lastIndexOf("Fanny",4));
+
+        // forEach
+        let sports = ["foot", "danse", "judo", "vélo"];
+        /*
+        sports.forEach(function(sport, index){
+        document.write("<br>" + index + "  " + sport)
+        });*/
+
+        sports.forEach(loop);
+        function loop(value, index){
+        document.write(index + ")  " + value + "<br>");
+        };
+
+        // toString()
+        let x = [20, 67 , 90, 89];
+        document.write(x.toString(), "<br>");
+
+        // fill(): permet l'écrasement de la valeur précédente 4 foisle nombre identique
+        document.write(x.fill(3), "<br>");
+
+        // include(): permet de vérifier si une des valeurs est présente dans un tableau, retourne un booleen
+        const arrayNumber = [1, 2, 3, 4,5]
+        document.write(arrayNumber + "<br>");
+        document.write( arrayNumber.includes(3), "<br>");
+
+        // some: verifie si un des valeurs sont présentent ds le tableau via un boolean. Et prend la valeurs corect
+        let arr = [10, 2, 15, 8, 0];
+        document.write(arr, "<br>");
+
+        let ver = arr.some(checkValue);
+
+        function checkValue(age){
+        return age >= 18;
+        };
+        document.write(ver);
+
+        // every: verifie si toutes les valeurs du tableau sont correct (par booleen)
+
+        // find: permet de trouver une valeur en imprimant la valeur. (par booleen)
+        // findIndex: trouve la valeur en indiquant la valeur de l'index concernée (par booleen)
+
+        // filter: va filtrer les valeurs vrai, et va s'imprimer, si faux le tableau s'imprimera
+
+    </script>
+</body>
+</html>

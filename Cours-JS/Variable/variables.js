@@ -21,3 +21,6 @@ console.log(animalDeCompagnie);
 
 
 // Portée de variable Locale et Globale.
+// Variable Globale: s'éxécute à l'intérieur et l'éxtérieur de la fonction
+
+// Variable Locale: s'éxécute à l'intérieur d'une la fonction.
