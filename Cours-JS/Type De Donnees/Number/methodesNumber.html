@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodes sur les nombres</title>
+</head>
+<body>
+    <h1>Les méthodes sur les nombres</h1>
+    <script>
+
+        //Méthodes pour les nombres
+
+        //toString(): va convertir des nombre en chaine de caractère
+        let num = 30;
+        //type of
+        document.write("In fisrt num is a: ", typeof num, "<br>"); //on vérifie que le type de donnée
+        let convertString = num.toString()
+        document.write(convertString, "<br>");
+        document.write("Then after to convert with toString method, the type is a: ", typeof convertString, "<br>");
+
+        //type of value
+
+        //Autres méthodes
+        var a = "100.20";
+        // var a = "100";
+        // var a = "10.340 years";
+        // var a = 20;
+        // var a = "My name";
+
+         var b = Number(a);
+        // var b = parseInt(a);
+        // var b = parseFloat(a);
+        // var b = isFinite(a);
+        // var b = Number.isInteger;
+        // var b = a.toFixed(9);
+        //var b = a.toPrecision(9);
+
+document.write(b, "<br>");
+// document.write(typeof a);
+
+        //si un on doit faire un travail lié au temps
+        // Avec get on peut obtenir date,  heure, année, etc...
+        // newDate()
+        let date = new Date(); //mot clé pour obtenir la date(jj/mm/année) et heure
+        document.write(date, "<br>"); // on imprime: Wed Aug 07 2024 19:42:36 GMT+0200 (heure d’été d’Europe centrale)
+        document.write(date.getDate(), "<br>"); // on veut obtenir la date du jour 
+        document.write(date.getFullYear(), "<br>"); // on veut obtenir l'année
+        document.write(date.getHours(), " ", "heures", "<br>"); // on veut obtenir l'heure: 19 heures
+        document.write(date.getUTCHours(), " ", "heures", "<br>"); // on veut obtenir l'heure: 17 heures
+        document.write(date.getMonth(), "ème mois", "<br>"); // on veut obtenir le mois
+        document.write(date.getSeconds(), "seconds", "<br>"); // on veut obtenir les secondes
+
+        // Avec set on peut modifier ou définir une donnée
+        date; // let date = new Date(); //mot clé pour obtenir la date(jj/mm/année) et heure
+        date.setDate(13); //set pour modifier la date
+        date.setFullYear(2025); //set pour modifier l'année
+        date.setHours(20); //set pour modifier l'heure: 20 
+        date.setMinutes(45); //set pour modifier les minutes: 45
+        date.setSeconds(26); //set pour modifier les secondes: 26
+
+        document.write(date, "<br>"); //on imprime la date modifié: Wed Aug 13 2025 20:45:26 GMT+0200 (heure d’été d’Europe centrale)
+
+        //Si on veut obtenir que la date: le jour, mois, date,année
+        document.write(date.toDateString()); // Wed Aug 13 2025
+
+    </script>
+   
+</body>
+</html>

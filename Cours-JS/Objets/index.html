@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets</title>
+</head>
+<body>
+    <script>
+
+        // Les objets
+        // 1ère façon de déclarer un objet
+        let id = {
+            name: "Joe",
+            lname: "Ben",
+            age: 30,
+            email: "someone@gmail.com",
+            movies: ["Endgame", "Spiderman", "Dhoom"],
+            income: function(){
+                return 25000.
+            },
+            FUN: function(){
+                return this.name + " " + this.lname;
+            }
+        };
+
+        document.write(id.income()) // imprime [objet Object] donc on va faire un console.log ou objet.propriété
+        //Préferer l'affichage avec console.log() pour les longs code, plus détaillé, favorise le debug
+        console.log(id.movies);
+        document.write(id.FUN(), "<br>");
+
+        // 2 ème façon de déclarer un objet
+        let first = new Object();
+        first.name = "Fanny";
+        first.lname = "Olenga Binene";
+        first.age = 39;
+
+        document.write(first.name, "<br>");
+        console.log(first);
+
+        // Objet des tableaux
+        let hello = [
+            {
+                name: "Muneeb",
+                age: 24,
+            },
+            {
+                name: "Anoosha",
+                age: 30,
+            },
+            {
+                name: "Ben",
+                age: 35,
+            },
+        ];
+        
+        console.log(hello);
+
+        // Boucler dans un objet de tableau: faire une boucle fort 
+        for(let i = 0; i < hello.length; i ++){
+            console.log(hello[i]);
+            document.write(hello[i].name + " "+ hello[i].age + "<br>");
+        };
+
+        // Boucler dans un objet : faire boucle for...in, permet d'imprimer les valeurs de notre objet en utilisant la boucle for...in
+        let a = {
+            firstname: "Mila",
+            lastname: "Kahne",
+            age: 28,
+        };
+
+        console.log(a);
+
+        for(let key in a){
+            document.write(key + " : " + a[key] + "<br>");
+        };
+
+    </script>
+</body>
+</html>

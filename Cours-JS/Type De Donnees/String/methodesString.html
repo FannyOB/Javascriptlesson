@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodes sur Strings</title>
+</head>
+<body>
+    <script>
+        // Méthodes String
+        // methodes pour rechercher ds une string
+        document.write(sentence.includes("Hell"), "<br>"); //boolean
+
+        document.write(sentence.startsWith("hello"), "<br>"); //boolean
+
+        document.write(sentence.endsWith("ld"), "<br>"); //boolean
+
+        document.write("La méthode search indique le numéro d'index: ",sentence.search("d"), "<br>"); //indique le numéro d'index dans notre chaine de charactère - 10
+
+        // match(): permet de faire une recherche ,indiquant le nbre de fois ou la chaine apparait, sous forme de tableau
+
+        let sentence2 = "Javascript is a Great is language";
+
+        /*
+        let newSentence2 = sentence2.match(/i/g); // g indique c'est une recherche globale dans la string
+        document.write(sentence2,"<br>");
+        document.write(newSentence2
+        */
+
+        // indexOf : permet de trouver la valeur de départ, en indiquant l'indice de recherche
+        let sentence3 = sentence2.indexOf("is");
+        document.write("L'indice de départ de \"is\" est: ", sentence3, "<br>"); //11 
+
+        // lastIndexOf() : imprime la valeur de la dernière partie
+        let sentence4 = sentence2.lastIndexOf("is");
+        document.write("L'indice de \"is\"de la dernière partie est: ", sentence4, "<br>"); //22
+
+        // replace() : Méthode de remplacement
+        let remplacement = sentence2.replace("Javascript", "C++");
+        document.write(remplacement, "<br>");
+
+        document.write(sentence2.replace(/is/g, "are"), "<br>");// va remplacer tous les "is" par are avec la mention "g".
+
+        // trim(): methode pour supprimer les espaces, surtout utilisé dans le texte du formulaire lorsque le user met accidentellement des espaces vides lorsqu'il rentre ces données.
+
+        let bienvenue = "            Welcome friends!!";
+        //alert(bienvenue);
+        let suppressEspace = bienvenue.trim();
+        //alert(suppressEspace)
+
+        //charAt() : permet de trouver le caractère de l'indice donné
+        let food = "cake";
+        let findCake = food.charAt(2)
+        document.write(findCake, "<br>"); // k
+
+        //charCodeAt() : role est de trouver le skycode dans vs code
+        //fromCharCode()
+
+        //concat() : pour joinde 2 tableaux ou 2 chaines
+        //split() : lorsque nous voulons convertir notre chaine  en tableau. Nous pouvons le faire par fractionnement (pour casser la chaine en plusieurs morceaux)
+        let vacation = "It was hollydays! <br>";
+        let cutWord = vacation.split("a"); //Création d'un tableau avec séparation à chaque lettre "a"
+        document.write(cutWord); // It w,s hollyd,ys!
+        console.log(cutWord); // ["It w","s hollyd","ys!"]
+
+        //repeat() : permet de repeter la string x fois
+        document.write(vacation.repeat(3));
+
+        //slice(): va imprimer à partir de l'indice donné
+        document.write(vacation.slice(7), "<br>") // La méthode de chaine commencera à partir de: hollydays!
+        //si je veux une zone specifique
+        document.write(vacation.slice(7, 15), "<br>") // affichera: "hollyday"; mais n'incluera pas le 15ème indice et la suite.
+
+        //substr(): fonctionne comme slice ms inclue le dernier paramètre
+        document.write(vacation.substr(7, 15), "<br>") // affichera: "hollydays!"";
+
+        //substring():fonctionne comme slice mais n'incluera pas le 15ème indice et la suite.
+        document.write(vacation.substring(7, 15), "<br>"); // affichera: "hollyday";
+
+        //toString(): va convertir des nombre en chaine de caractère
+        let num = 30;
+        //type of
+        document.write("In fisrt num is a: ", typeof num, "<br>"); //on vérifie que le type de donnée
+        let convertString = num.toString()
+        document.write(convertString, "<br>");
+        document.write("Then after to convert with toString method, the type is a: ", typeof convertString);
+
+        //type of value
+    </script>
+</body>
+</html>
