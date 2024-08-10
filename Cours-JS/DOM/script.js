@@ -53,3 +53,34 @@ let answer= "";
 answer = prompt("Comment tu t'appelles?")
 */
 
+
+/**
+ * DOM
+ * Modèle Dom ou arbre Dom: 
+ * -constitué d'un element racine l' Element HTML (parent)
+ * - qui lui est parent de 2 élements:
+ * 
+ *                                              HTML (Root Element)
+ *                                               |
+ *                                |------------------------------|
+ *                              parent                         parent
+ *                               Head            et              Body 
+ *                                |(first child Element)         |(last child Element)
+ *                                |                              |(parents de) 
+ *                         |------|-----|             |----------|---------|
+ *                               child child           child    child    child
+ *                        Title   Meta  Link         Header   Section   Footer
+ *                                                                |
+ *                                                                | parent 
+ *      Méthodes utilisées:                                  |----------|
+ *                         Get                             child       child
+ *                         Set                                |           |
+ *                         Add HTML                          H1          P
+ *                         Delete HTML element                |
+ *                                                       Atrr--
+ * 
+ *                                                                                            
+ * 
+ * En js on parle de noeud d'élément,noeud d'attribut, etc.. (node)
+ */
+
