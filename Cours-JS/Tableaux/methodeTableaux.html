@@ -132,7 +132,7 @@
         document.write("Tableau après modification avec le splice : ", fruct , "<br>"); // Tableau après modification avec le splice : cherry,blue,strawberries,watermelon
         document.write("Éléments supprimés : ", fructos, "<br>") // Éléments supprimés : banana,orange
 
-        // méthode isArray: vérifie le type de donée est un tableau par boolean
+        // méthode isArray: vérifie le type de donnée est un tableau par boolean
         //let tab2 = [4, 3, 2, 1];
         let tab2 = 1;
         let verify = Array.isArray(tab2);
@@ -152,11 +152,11 @@
         */
         let tab3 = ["Fanny", "Muneeb", "Ori", "Fanny", "Julie", "Fanny"];
         document.write(tab3, "<br>");
-        let research = tab3.indexOf("Fanny", 4);// en ème paramètre, possibilité d'indiquer où la recherche débute avec un index.
+        let research = tab3.indexOf("Fanny", 4);// en 2 ème paramètre, possibilité d'indiquer où la recherche débute avec un index.
         document.write(research, "<br>");
 
         // lastIndexOf
-        document.write(tab3.lastIndexOf("Fanny",4));
+        document.write(tab3.lastIndexOf("Fanny", 4));
 
         // forEach
         let sports = ["foot", "danse", "judo", "vélo"];
@@ -174,15 +174,15 @@
         let x = [20, 67 , 90, 89];
         document.write(x.toString(), "<br>");
 
-        // fill(): permet l'écrasement de la valeur précédente 4 foisle nombre identique
+        // fill(): permet l'écrasement de la valeur précédente nbe de foisle nombre identique
         document.write(x.fill(3), "<br>");
 
         // include(): permet de vérifier si une des valeurs est présente dans un tableau, retourne un booleen
-        const arrayNumber = [1, 2, 3, 4,5]
+        const arrayNumber = [1, 2, 3, 4, 5]
         document.write(arrayNumber + "<br>");
         document.write( arrayNumber.includes(3), "<br>");
 
-        // some: verifie si un des valeurs sont présentent ds le tableau via un boolean. Et prend la valeurs corect
+        // some: verifie si une des valeurs est présente ds le tableau via un boolean. Et prend la valeur correct
         let arr = [10, 2, 15, 8, 0];
         document.write(arr, "<br>");
 
