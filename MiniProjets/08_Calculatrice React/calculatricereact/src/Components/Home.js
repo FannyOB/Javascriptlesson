@@ -4,8 +4,7 @@ import Calcutatrice from "./Calcultatrice/Calculatrice";
 function Home(){
     return(
         <>
-        <p>This is Home Page</p>
-        <Calcutatrice />
+         <Calcutatrice />
         </>
     );
 }

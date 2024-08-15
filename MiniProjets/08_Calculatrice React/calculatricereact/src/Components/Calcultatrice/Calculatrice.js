@@ -23,7 +23,6 @@ function Calcutatrice(){
 
     return(
         <>
-            <p>Cest une calculatrice</p>
             <div className="calc">
                 <input type="text" placeholder="0" id="answer" value={result} />
                 <input type="button" value="9" className="button" onClick={clickhandler} />
